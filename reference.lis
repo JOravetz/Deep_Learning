@@ -1,0 +1,1000 @@
+ 8284  make
+ 8285  su_market_neutral_sharpe < input.dat verbose=1 reference=ref.dat 
+ 8286  vi su_market_neutral_sharpe.c 
+ 8287  make
+ 8288  vi su_market_neutral_sharpe.c 
+ 8289  make
+ 8290  vi su_market_neutral_sharpe.c 
+ 8291  make
+ 8292  su_market_neutral_sharpe < input.dat verbose=1 reference=ref.dat 
+ 8293  history | grep getdata
+ 8294  ../getdata.sh -s GOOG -n 730 > input.dat
+ 8295  su_market_neutral_sharpe < input.dat verbose=1 reference=ref.dat 
+ 8296  vi su_market_neutral_sharpe.c 
+ 8297  make
+ 8298  su_market_neutral_sharpe < input.dat verbose=1 reference=ref.dat 
+ 8299  ../getdata.sh -s GOOG -n 730 > input.dat
+ 8300  su_market_neutral_sharpe < input.dat verbose=1 reference=ref.dat 
+ 8301  more ref.dat
+ 8302  history | grep suyahoo
+ 8303  suyahoo stock=SPY ndays=730 | head
+ 8304  suyahoo stock=SPY ndays=730 | tail
+ 8305  history | grep getdata
+ 8306  ../getdata.sh -s SPY -n 10000 | tac > ref.dat
+ 8307  head ref.dat
+ 8308  tail ref.dat
+ 8309  ../getdata.sh -s SPY -n 10000 | tail -730 > ref.dat
+ 8310  head ref.dat
+ 8311  tail ref.dat
+ 8312  su_market_neutral_sharpe < input.dat verbose=1 reference=ref.dat 
+ 8313  ../getdata.sh -s SPY -n 10000 | tail -504 > ref.dat
+ 8314  su_market_neutral_sharpe < input.dat verbose=1 reference=ref.dat 
+ 8315  ../getdata.sh -s GS -n 730 > input.dat
+ 8316  su_market_neutral_sharpe < input.dat verbose=1 reference=ref.dat 
+ 8317  cd ..
+ 8318  cp wsharpe.sh w_market_neutral_sharpe.sh
+ 8319  vi w_market_neutral_sharpe.sh 
+ 8320  cat test.lis
+ 8321  vi test.lis
+ 8322  chmod 711 *.sh
+ 8323  w_market_neutral_sharpe.sh -s test.lis
+ 8324  w_market_neutral_sharpe.sh -s fundamental.lis
+ 8325  lh
+ 8326  mv output.mn.dat output.mn.fundamental.730.dat
+ 8327  vi test.lis
+ 8328  w_market_neutral_sharpe.sh -s test.lis
+ 8329  lh
+ 8330  sftp 10700029@haclkd
+ 8331  sftp stockminer@www.stockminer.net
+ 8332  ssh stockminer@www.stockminer.net
+ 8333  locate history.sh
+ 8334  cp /home/jjoravet/Udacity/Documentation/history.sh .
+ 8335  history.sh
+ 8336  exit
+ 8337  ssh stockminer@www.stockminer.net
+ 8338  h
+ 8339  ssh stockminer@www.stockminer.net
+ 8340  reset
+ 8341  cd Udacity/ML_for_Trading/
+ 8342  ls
+ 8343  evince Python_for_Finance.pdf
+ 8344  evince Successful_Algorithmic_Trading.pdf
+ 8345  evince Mastering-Python-for-Finance\[ebooksfeed.com\].pdf 
+ 8346  ls
+ 8347  evince 320888473-What-hedge-funds-really-do-an-introduction-to-Portfolio-management.pdf 
+ 8348  cd Udacity/ML_for_Trading/
+ 8349  git clone https://github.com/matsuimp/sharpe-ratio.git
+ 8350  lh
+ 8351  cd sharpe-ratio
+ 8352  ls
+ 8353  python main.py
+ 8354  lh
+ 8355  mv atleast20.txt atleast20.txt.orig
+ 8356  sftp stockminer@www.stockminer.net
+ 8357  mv momentum.lis atleast20.txt
+ 8358  python main.py
+ 8359  lh
+ 8360  cat atleast20.txt
+ 8361  lh
+ 8362  python main.py
+ 8363  lh
+ 8364  mv atleast20.txt.orig atleast20.txt
+ 8365  cd ..
+ 8366  lh
+ 8367  rm -rf sharpe-ratio
+ 8368  exit
+ 8369  ssh stockminer@www.stockminer.net
+ 8370  exit
+ 8371  cd Downloads/
+ 8372  cd vpn
+ 8373  ls
+ 8374  cp ca.crt ca.pem
+ 8375  cp certificate.crt certificate.pem
+ 8376  cp key.crt key.pem
+ 8377  cp key.key key.pem
+ 8378  cd Downloads/vpn
+ 8379  chmod 777 *
+ 8380  ls
+ 8381  ls -alt
+ 8382  cd ..
+ 8383  ls -alt 
+ 8384  cd vpn
+ 8385  ls -alt
+ 8386  su
+ 8387  ls
+ 8388  pwd
+ 8389  clear
+ 8390  uname -a
+ 8391  exit
+ 8392  cd Downloads
+ 8393  wget http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.8/linux-headers-4.8.0-040800-generic_4.8.0-040800.201610022031_amd64.deb
+ 8394  wget http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.8/linux-headers-4.8.0-040800_4.8.0-040800.201610022031_all.deb
+ 8395  wget http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.8/linux-image-4.8.0-040800-generic_4.8.0-040800.201610022031_amd64.deb
+ 8396  sudo dpkg -i linux*4.8*.deb
+ 8397  sudo shutdown -r now
+ 8398  sudo apt remove 'linux-headers-4.8*' 'linux-image-4.8*'
+ 8399  su
+ 8400  dkpg -l | grep openvpn
+ 8401  dpkg -l | grep openvpn
+ 8402  su
+ 8403  cd Udacity/
+ 8404  mkdir Deep_Learning
+ 8405  cd Deep_Learning/
+ 8406  git clone https://github.com/amaas/stanford_dl_ex.git
+ 8407  ls
+ 8408  cd stanford_dl_ex/
+ 8409  ls
+ 8410  cat README.md 
+ 8411  cd ..
+ 8412  jupyter notebook &
+ 8413  conda list | grep qt
+ 8414  conda install pyqt
+ 8415  conda install qt
+ 8416  fg
+ 8417  lh
+ 8418  conda update conda
+ 8419  conda update anaconda
+ 8420  jupyter notebook
+ 8421  bg
+ 8422  conda list | grep qt
+ 8423  conda install matplotlib
+ 8424  fg
+ 8425  jupyter notebook --pylab='qt5'
+ 8426  jupyter notebook
+ 8427  bg
+ 8428  history | grep conda | grep search
+ 8429  anaconda search -t pytq5
+ 8430  anaconda search -t conda pytq5
+ 8431  anaconda search -t conda pyqt5
+ 8432  history | grep anaconda
+ 8433  anaconda search -t conda pyqt5
+ 8434  conda install --channel https://conda.anaconda.org/mmcauliffe pyqt5
+ 8435  cd
+ 8436  ls
+ 8437  fg
+ 8438  cd
+ 8439  lh
+ 8440  rm -rf anaconda2
+ 8441  cd 
+ 8442  cd Downloads/
+ 8443  ls
+ 8444  ls *.sh
+ 8445  cat setup_mac_usb_boot.sh
+ 8446  rm setup_mac_usb_boot.sh
+ 8447  ls
+ 8448  rm linux-headers-4.8.0-040800_4.8.0-040800.201610022031_all.deb linux-headers-4.8.0-040800-generic_4.8.0-040800.201610022031_amd64.deb linux-image-4.8.0-040800-generic_4.8.0-040800.201610022031_amd64.deb
+ 8449  ls
+ 8450  lh
+ 8451  sh ./Anaconda3-4.2.0-Linux-x86_64.sh
+ 8452  ./Anaconda3-4.2.0-Linux-x86_64.sh
+ 8453  bash Anaconda3-4.2.0-Linux-x86_64.sh
+ 8454  cd
+ 8455  vi .bashrc
+ 8456  source .bashrc
+ 8457  conda update conda
+ 8458  conda update anaconda
+ 8459  cd Udacity/
+ 8460  cd Deep_Learning/
+ 8461  ls
+ 8462  jupyter notebook Untitled.ipynb
+ 8463  bg
+ 8464  git clone https://github.com/tensorflow/tensorflow.git
+ 8465  ls
+ 8466  history | grep search
+ 8467  anaconda search -t conda tensorflow
+ 8468  history | grep install
+ 8469  conda install tensorflow
+ 8470  cd tensorflow
+ 8471  find . -name 1_notminst.ipynb
+ 8472  ls
+ 8473  find . -name *.ipynb
+ 8474  cd ..
+ 8475  find . -name *.ipynb
+ 8476  jupyter notebook ./tensorflow/tensorflow/examples/udacity/1_notmnist.ipynb
+ 8477  bg
+ 8478  history | grep search
+ 8479  anaconda search -t conda pillow
+ 8480  history | grep install
+ 8481  conda install pillow
+ 8482  ls
+ 8483  history
+ 8484  cd ./tensorflow/tensorflow/examples/udacity/
+ 8485  ls
+ 8486  fg
+ 8487  jupyter notebook 1_notmnist.ipynb
+ 8488  bg
+ 8489  anaconda search -t conda PIL
+ 8490  conda list scipy
+ 8491  conda list pillow
+ 8492  conda list *
+ 8493  conda list 
+ 8494  anaconda search -t conda Pillow
+ 8495  locate history.sh
+ 8496  pwd
+ 8497  cp /home/jjoravet/Udacity/ML_for_Trading/history.sh .
+ 8498  history.sh
+ 8499  exit
+ 8500  uname -a
+ 8501  cd Udacity/
+ 8502  ls
+ 8503  cd Deep_Learning/
+ 8504  ls
+ 8505  cd tensorflow/
+ 8506  ls
+ 8507  cd tensorflow/
+ 8508  ls
+ 8509  find . -name "*.ipynb"
+ 8510  cd examples
+ 8511  ls
+ 8512  cd udacity
+ 8513  ls
+ 8514  history | grep jupy
+ 8515  jupyter notebook 1_notmnist.ipynb
+ 8516  bg
+ 8517  conda list | grep pil
+ 8518  conda search -t anaconda pil
+ 8519  anaconda search -t conda pil
+ 8520  anaconda install pil
+ 8521  conda install pil
+ 8522  conda remove pil
+ 8523  conda remove PIL
+ 8524  dpkg -l 
+ 8525  dpkg -l | grep pillow
+ 8526  dpkg -l | grep python
+ 8527  cd
+ 8528  ls
+ 8529  cd ~/Downloads/
+ 8530  ls
+ 8531  lh
+ 8532  rm -rf ~/anaconda3/
+ 8533  bash Anaconda3-4.2.0-Linux-x86_64.sh
+ 8534  cd
+ 8535  source .bashrc
+ 8536  cd Udacity/
+ 8537  ls
+ 8538  cd Deep_Learning/
+ 8539  ls
+ 8540  cd tensor
+ 8541  cd tensorflow/
+ 8542  find . -name "*.ipynb"
+ 8543  cd ./tensorflow/examples/udacity/
+ 8544  ls
+ 8545  jupyter notebook 1_notmnist.ipynb
+ 8546  bg
+ 8547  cd
+ 8548  conda remove pillow
+ 8549  conda install pillow
+ 8550  fg
+ 8551  ls
+ 8552  cd
+ 8553  cd Downloads/
+ 8554  lh
+ 8555  bash Anaconda2-4.2.0-Linux-x86_64.sh
+ 8556  cd
+ 8557  vi .bashrc
+ 8558  source .bashrc
+ 8559  cd Udacity/
+ 8560  cd Deep_Learning/
+ 8561  find . -name "*.ipynb"
+ 8562  cd ./tensorflow/tensorflow/examples/udacity/1_notmnist.ipynb
+ 8563  cd ./tensorflow/tensorflow/examples/udacity/
+ 8564  jupyter notebook 1_notmnist.ipynb
+ 8565  bg
+ 8566  conda install tensorflow
+ 8567  cd
+ 8568  vi .bashrc
+ 8569  source .bashrc
+ 8570  fg
+ 8571  pwd
+ 8572  cd /home/jjoravet/Udacity/Deep_Learning/tensorflow/tensorflow/examples/udacity
+ 8573  ls
+ 8574  jupyter notebook 1_notmnist.ipynb
+ 8575  cd
+ 8576  vi .bashrc
+ 8577  source .bashrc
+ 8578  conda remove pillow
+ 8579  conda install pil
+ 8580  history
+ 8581  cd /home/jjoravet/Udacity/Deep_Learning/tensorflow/tensorflow/examples/udacity
+ 8582  jupyter notebook 1_notmnist.ipynb
+ 8583  pwd
+ 8584  cd
+ 8585  ln -s /home/jjoravet/Udacity/Deep_Learning/tensorflow/tensorflow/examples/udacity dl
+ 8586  cd dl
+ 8587  ls
+ 8588  pwd
+ 8589  cd
+ 8590  history.sh
+ 8591  exit
+ 8592  ssh stockminer@www.stockminer.net
+ 8593  lh
+ 8594  cd dl
+ 8595  jupyter notebook 1_notmnist.ipynb
+ 8596  cd dl
+ 8597  ls
+ 8598  history.sh
+ 8599  cd dl
+ 8600  jupyter notebook 1_notmnist.ipynb
+ 8601  cd dl
+ 8602  ls
+ 8603  cd notMNIST_large
+ 8604  ls
+ 8605  file *
+ 8606  cd dl
+ 8607  jupyter notebook 1_notmnist.ipynb
+ 8608  su
+ 8609  cd Downloads/
+ 8610  ls
+ 8611  cd vpn
+ 8612  ls
+ 8613  rm *.pem
+ 8614  ls -alt
+ 8615  rm *
+ 8616  touch ca.crt certificate.crt key.key
+ 8617  vi ca.crt
+ 8618  vi certificate.crt
+ 8619  vi ca.crt
+ 8620  vi key.key
+ 8621  cd Downloads/vpn
+ 8622  ls
+ 8623  ls -alt
+ 8624  cd ..
+ 8625  ls
+ 8626  lh
+ 8627  more vpnbook-euro2-tcp443.ovpn
+ 8628  !
+ 8629  more vpnbook-euro2-tcp443.ovpn
+ 8630  su
+ 8631  cd Downloads/
+ 8632  lh
+ 8633  ssh stockminer@www.stockminer.net
+ 8634  exit
+ 8635  cd dl
+ 8636  ls
+ 8637  conda install tensorflow
+ 8638  cd
+ 8639  cd Udacity/Deep_Learning/
+ 8640  ls
+ 8641  git clone https://github.com/Arn-O/udacity-deep-learning.git
+ 8642  ls
+ 8643  cd udacity-deep-learning/
+ 8644  ls
+ 8645  jupyter notebook 1_notmnist.ipynb
+ 8646  sudo apt-get upgrade
+ 8647  sudo apt-get update
+ 8648  sudo apt-get upgrade
+ 8649  reboot
+ 8650  cd dl
+ 8651  jupyter notebook 1_notmnist.ipynb
+ 8652  ssh stockminer@www.stockminer.net
+ 8653  exit
+ 8654  ssh stockminer@www.stockminer.net
+ 8655  exit
+ 8656  cd Udacity/
+ 8657  ls
+ 8658  cd Deep_Learning/
+ 8659  ls
+ 8660  cd
+ 8661  cd dl
+ 8662  ls
+ 8663  history | grep jupyter
+ 8664  jupyter notebook 1_notmnist.ipynb
+ 8665  exit
+ 8666  cd Downloads/
+ 8667  lh
+ 8668  rm *.torrent
+ 8669  mkdir USB_Contents
+ 8670  ls cuda*
+ 8671  locate cuda
+ 8672  tar zcvf udacity.tar.gz Udacity
+ 8673  ping 192.168.1.94
+ 8674  lh
+ 8675  sftp jjoravet@192.168.1.94
+ 8676  rm -rf /home/jjoravet/.ssh
+ 8677  sftp jjoravet@192.168.1.94
+ 8678  ifconfig
+ 8679  sftp jjoravet@192.168.1.94
+ 8680  sftp jjoravet@192.168.1.82
+ 8681  ls
+ 8682  ls -alt udacity.tar.gz 
+ 8683  sftp jjoravet@192.168.1.82
+ 8684  exit
+ 8685  cd dl
+ 8686  ls
+ 8687  cd 
+ 8688  lh
+ 8689  rm udacity.tar.gz
+ 8690  bc
+ 8691  cd dl
+ 8692  jupyter notebook 1_notmnist.ipynb
+ 8693  bg
+ 8694  exit
+ 8695  ssh stockminer@www.stockminer.net
+ 8696  exit
+ 8697  ssh stockminer@www.stockminer.net
+ 8698  ls
+ 8699  pwd
+ 8700  ls
+ 8701  pwd
+ 8702  ls
+ 8703  cd port_opt
+ 8704  ls
+ 8705  cat README.md 
+ 8706  python stocks.py
+ 8707  python portfolio_opt.py
+ 8708  conda install cvxopt
+ 8709  conda install patsy
+ 8710  conda install statsmodels
+ 8711  python portfolio_opt.py
+ 8712  cat README.md 
+ 8713  git pull
+ 8714  ls
+ 8715  cd dataq
+ 8716  cd data
+ 8717  ls
+ 8718  cat quotes.csv
+ 8719  cat goog_2005_2010.csv 
+ 8720  cd ..
+ 8721  ls
+ 8722  more stocks.py
+ 8723  lh
+ 8724  more portfolio_opt.py
+ 8725  exit
+ 8726  uname -a
+ 8727  ssh stockminer@www.stockminer.net
+ 8728  ls
+ 8729  cd node
+ 8730  ls
+ 8731  more README.md 
+ 8732  cd
+ 8733  rm -rf node
+ 8734  su
+ 8735  cd port_opt
+ 8736  ls
+ 8737  vi portfolio_opt.py
+ 8738  cat README.md 
+ 8739  more stocks.py
+ 8740  ls
+ 8741  grep stocks portfolio_opt.py
+ 8742  python portfolio_opt.py
+ 8743  more portfolio_opt.py
+ 8744  python portfolio_opt.py
+ 8745  symbols = ['AEIS', 'NVDA', 'EXEL', 'TOWN', 'EBIX', 'NOC', 'CWST', 'DY', 'ROCK']
+ 8746  git pull
+ 8747  lh
+ 8748  exit
+ 8749  su
+ 8750  cd
+ 8751  cd Udacity/
+ 8752  ls
+ 8753  cd Deep_Learning/
+ 8754  ls
+ 8755  cd udacity-730
+ 8756  ls
+ 8757  evince coursenotes.pdf
+ 8758  cat README.md 
+ 8759  sudo apt-get install texlive
+ 8760  sudo apt-get install texinfo
+ 8761  which pdftex
+ 8762  ls
+ 8763  pdftex coursenotes.tex
+ 8764  lh
+ 8765  evince coursenotes.pdf
+ 8766  sudo apt-get install texlive-full
+ 8767  ls
+ 8768  pdftex coursenotes.tex
+ 8769  ls
+ 8770  which lyx
+ 8771  sudo apt-get install lyx
+ 8772  ls
+ 8773  lyx coursenotes.tex
+ 8774  exit
+ 8775  cd Udacity/Deep_Learning/
+ 8776  ls
+ 8777  cd udacity-deep-learning
+ 8778  ls
+ 8779  git pull
+ 8780  exit
+ 8781  cd dl
+ 8782  ls
+ 8783  jupyter notebook 2_fullyconnected.ipynb 
+ 8784  bg
+ 8785  exit
+ 8786  ssh stockminer@www.stockminer.net
+ 8787  su
+ 8788  cd Downloads/
+ 8789  lh
+ 8790  rm tails-i386-2.7.torrent
+ 8791  cd dl
+ 8792  ls
+ 8793  history.sh
+ 8794  cat README.md 
+ 8795  ls
+ 8796  cp 1_notmnist.ipynb 2_fullyconnected.ipynb ~/Udacity/Deep_Learning/
+ 8797  cd ~/Udacity/Deep_Learning/
+ 8798  ls
+ 8799  cd tensorflow/
+ 8800  git pull
+ 8801  cd
+ 8802  cd dl
+ 8803  ls
+ 8804  lh
+ 8805  pwd
+ 8806  ls
+ 8807  history | grep cp
+ 8808  cp 1_notmnist.ipynb 2_fullyconnected.ipynb ~/Udacity/Deep_Learning/
+ 8809  cd dl
+ 8810  jupyter notebook 2_fullyconnected.ipynb 
+ 8811  bg
+ 8812  lsb_release -a
+ 8813  dpkg -l | grep tor
+ 8814  dpkg -l | grep -w tor
+ 8815  apt-cache search tor
+ 8816  sudo apt-get install tor
+ 8817  torbrowser-launcher
+ 8818  sudo apt-get install mixmaster torbrowser-launcher socat tor-arm apparmor-utils obfsproxy obfs4proxy
+ 8819  df
+ 8820  su
+ 8821  ssh stockminer@www.stockminer.net
+ 8822  exit
+ 8823  vi stuff
+ 8824  cd dl
+ 8825  ls
+ 8826  cd notMNIST_large
+ 8827  ls
+ 8828  file *
+ 8829  ls -alt
+ 8830  cd a
+ 8831  ls
+ 8832  cd A
+ 8833  ls
+ 8834  display Zm9udGxpbmU2XzEudHRm.png
+ 8835  display ZmFjay50dGY=.png
+ 8836  ls -alt | wc -l
+ 8837  identify ZmxhbWluIHBvby50dGY=.png
+ 8838  man sort
+ 8839  cd ..
+ 8840  vi display_random_images.sh
+ 8841  ls -l | grep `^d'
+ 8842  ls -l | grep '^d'
+ 8843  ls -d */
+ 8844  lh
+ 8845  vi display_random_images.sh 
+ 8846  chmod 711 *.sh
+ 8847  display_random_images.sh
+ 8848  ls
+ 8849  vi display_random_images.sh 
+ 8850  display_random_images.sh
+ 8851  ps
+ 8852  killall display
+ 8853  ls
+ 8854  cat display_random_images.sh 
+ 8855  man tail
+ 8856  cd a
+ 8857  ls
+ 8858  cd A
+ 8859  ls
+ 8860  ls | sort -R
+ 8861  ls | sort -R | tail -$N
+ 8862  ls | sort -R | tail -20
+ 8863  vi display_random_images.sh 
+ 8864  cd ..
+ 8865  vi display_random_images.sh 
+ 8866  ls
+ 8867  display_random_images.sh
+ 8868  vi display_random_images.sh 
+ 8869  ./display_random_images.sh 
+ 8870  vi display_random_images.sh 
+ 8871  ./display_random_images.sh 
+ 8872  vi display_random_images.sh 
+ 8873  killall display
+ 8874  vi display_random_images.sh 
+ 8875  ./display_random_images.sh 
+ 8876  vi display_random_images.sh 
+ 8877  ./display_random_images.sh 
+ 8878  vi display_random_images.sh 
+ 8879  ./display_random_images.sh 
+ 8880  vi display_random_images.sh 
+ 8881  ./display_random_images.sh 
+ 8882  ls
+ 8883  cd A
+ 8884  ls
+ 8885  lh
+ 8886  cd ..
+ 8887  ls
+ 8888  cd notMNIST_large/
+ 8889  ls
+ 8890  vi display_random_images.sh
+ 8891  find . -name "montage.png" -print
+ 8892  vi display_random_images.sh
+ 8893  ./display_random_images.sh 
+ 8894  find . -name "montage.png" -print
+ 8895  cd A
+ 8896  ls
+ 8897  lh
+ 8898  du
+ 8899  cd ..
+ 8900  ls
+ 8901  cat display_random_images.sh 
+ 8902  vi display_random_images.sh 
+ 8903  ./display_random_images.sh 
+ 8904  vi display_random_images.sh  
+ 8905  ./display_random_images.sh 
+ 8906  man montage
+ 8907  lh
+ 8908  ls
+ 8909  cat display_random_images.sh 
+ 8910  montage -background '#000000' -fill 'gray' -size 768x640 ?.montage.png combined.montages.png
+ 8911  lh
+ 8912  display combined.montages.png
+ 8913  man montage
+ 8914  vi display_random_images.sh  
+ 8915  montage -background '#000000' -fill 'gray' -define jpeg:size=768x640 ?.montage.png combined.montages.jpg
+ 8916  lh
+ 8917  rm combined.montages.png
+ 8918  display combined.montages.jpg
+ 8919  vi display_random_images.sh 
+ 8920  display combined.montages.jpg
+ 8921  ./display
+ 8922  ./display_random_images.sh 
+ 8923  ls
+ 8924  display B.montage.png
+ 8925  vi display_random_images.sh 
+ 8926  bc
+ 8927  vi display_random_images.sh 
+ 8928  ./display_random_images.sh 
+ 8929  bc
+ 8930  vi display_random_images.sh 
+ 8931  cat display_random_images.sh 
+ 8932  ls
+ 8933  vi display_random_images.sh 
+ 8934  cat display_random_images.sh 
+ 8935  montage -label '%f' -font Helvetica -pointsize 10 -background '#000000' -fill 'gray' -geometry 280x280+4+4 ?.montage.png combined.montages.png
+ 8936  display combined.montages.png
+ 8937  ls
+ 8938  vi display_random_images.sh 
+ 8939  cd
+ 8940  cd Ceiba.new
+ 8941  ls
+ 8942  ls *.sh
+ 8943  grep shift *.sh
+ 8944  cat 03_process.sh 
+ 8945  cd
+ 8946  cd dl
+ 8947  ls
+ 8948  cd notMNIST_large/
+ 8949  ls
+ 8950  vi display_random_images.sh 
+ 8951  ./display_random_images.sh 
+ 8952  ls
+ 8953  rm combined.montages.png
+ 8954  lh
+ 8955  vi display_random_images.sh 
+ 8956  ./display_random_images.sh -n 50
+ 8957  vi display_random_images.sh 
+ 8958  ./display_random_images.sh -n 50
+ 8959  vi display_random_images.sh 
+ 8960  ./display_random_images.sh -n 50
+ 8961  lh
+ 8962  display combined.montages.jpg
+ 8963  vi display_random_images.sh 
+ 8964  ls
+ 8965  ./display
+ 8966  ./display_random_images.sh -n 50
+ 8967  ./display_random_images.sh -n 100
+ 8968  lh
+ 8969  display combined.montages.jpg
+ 8970  vi display_random_images.sh 
+ 8971  ./display_random_images.sh -n 100
+ 8972  bc
+ 8973  vi display_random_images.sh 
+ 8974  ./display_random_images.sh -n 100
+ 8975  vi display_random_images.sh 
+ 8976  ./display_random_images.sh -n 100
+ 8977  lh
+ 8978  display combined.montages.jpg
+ 8979  vi display_random_images.sh 
+ 8980  ./display_random_images.sh -n 100
+ 8981  ls
+ 8982  cd A
+ 8983  md5sum * | sort | awk {'print $2 " " $1'}  | uniq -Df 1
+ 8984  md5sum * | sort | awk {'print $2 " " $1'}  | uniq -Df 1 | wc -l
+ 8985  ls -alt | wc -l
+ 8986  md5sum * | sort | awk {'print $2 " " $1'}  | uniq -Df 1 | wc -l
+ 8987  md5sum *
+ 8988  md5sum * | sort
+ 8989  man uniq
+ 8990  md5sum * | sort | awk {'print $2 " " $1'}  | uniq -Df 1 | wc -l
+ 8991  man uniq
+ 8992  md5sum * | sort | awk {'print $2 " " $1'}
+ 8993  md5sum * | sort | awk {'print $2 " " $1'}  | uniq -Df 1
+ 8994  md5sum * | sort | awk {'print $2 " " $1'}  | uniq -Df 1 | wc -l
+ 8995  md5sum * | sort | awk {'print $2 " " $1'}  | uniq -Df 1 | head
+ 8996  display RnJlaWdodEJpZ0JvbGQudHRm.png RnJlaWdodEJpZ0JvbGRTQy50dGY=.png
+ 8997  ls
+ 8998  display RnJlaWdodEJpZ0JvbGQudHRm.png RnJlaWdodEJpZ0JvbGRTQy50dGY=.png
+ 8999  display RnJlaWdodEJpZ0JvbGQudHRm.png 
+ 9000  bg
+ 9001  display RnJlaWdodEJpZ0JvbGRTQy50dGY=.png
+ 9002  montage RnJlaWdodEJpZ0JvbGQudHRm.png RnJlaWdodEJpZ0JvbGRTQy50dGY=.png
+ 9003  lh
+ 9004  montage RnJlaWdodEJpZ0JvbGQudHRm.png RnJlaWdodEJpZ0JvbGRTQy50dGY=.png stuff.png
+ 9005  display stuff.png
+ 9006  rm stuff.png
+ 9007  md5sum * | sort | awk {'print $2 " " $1'}  | uniq -Df 1 | wc -l
+ 9008  bc
+ 9009  md5sum * | sort | awk {'print $2 " " $1'}  | uniq -Df 1 | uniq | wc -l
+ 9010  md5sum * | sort | awk {'print $2 " " $1'}  | uniq -Df 1 | uniq -f 1 | wc -l
+ 9011  md5sum * | sort | awk {'print $2 " " $1'}  | uniq -Df 1 | uniq -f 1 
+ 9012  man uniq
+ 9013  md5sum * | sort
+ 9014  md5sum * | sort | uniq | wc -l
+ 9015  man uniq
+ 9016  md5sum * | sort | print '{$2, $1}' 
+ 9017  md5sum * | sort | awk '{print $2, $1}' 
+ 9018  md5sum * | sort | awk '{print $2, $1}' | uniq -f 1
+ 9019  md5sum * | sort | awk '{print $2, $1}' | uniq -f 1 | wc -l
+ 9020  md5sum * | sort | awk '{print $2, $1}' | wc -l
+ 9021  bc
+ 9022  md5sum * | sort | awk '{print $2, $1}' | uniq -Df 1 | wc -l
+ 9023  md5sum * | sort | awk '{print $2, $1}' | uniq -Df 1 | uniq 
+ 9024  md5sum * | sort | awk '{print $2, $1}' | uniq -Df 1 | uniq | wc -l
+ 9025  md5sum * | sort | awk '{print $2, $1}' | uniq -Df 1 | uniq -f 1 | wc -l
+ 9026  md5sum * | sort | awk '{print $2, $1}' | uniq -Df 1 | uniq -f 1 
+ 9027  md5sum * | sort | awk '{print $2, $1}' | uniq -Df 1 | sort -k1,1 | uniq -f 1 
+ 9028  md5sum * | sort | awk '{print $2, $1}' | uniq -Df 1 | sort -k1,1 | uniq -f 1 | wc -l
+ 9029  md5sum * | sort | awk '{print $2, $1}' | uniq -Df 1 | sort -k1,1
+ 9030  md5sum * | sort | awk '{print $2, $1}' | uniq -Df 1 | sort -k1,1 | uniq -Df 1
+ 9031  md5sum * | sort | awk '{print $2, $1}' | uniq -Df 1 | sort -k1,1 | uniq -f 1
+ 9032  md5sum * | sort | awk '{print $2, $1}' | uniq -Df 1 | sort -k1,1 | uniq -f 1 | wc -l
+ 9033  ls -alt | wc -l
+ 9034  md5sum *
+ 9035  md5sum * | sort -k1,1n
+ 9036  md5sum * | sort -k1,1
+ 9037  md5sum * | sort -k1,1n
+ 9038  md5sum * | sort -k1,1n | awk '{print $2, $1}'
+ 9039  md5sum * | sort -k1,1n | awk '{print $2, $1}' | uniq -f 1 
+ 9040  md5sum * | sort -k1,1n | awk '{print $2, $1}' | uniq -f 1 | wc -l
+ 9041  ls -alt | wc -l
+ 9042  bc
+ 9043  md5sum * | sort -k1,1n | awk '{print $2, $1}' | uniq -Df 1 | wc -l
+ 9044  bc
+ 9045  md5sum * | sort -k1,1n | awk '{print $2, $1}' | uniq -Df 1 
+ 9046  md5sum * | sort -k1,1n | awk '{print $2, $1}' | uniq -Df 1 | sort -k2,2
+ 9047  md5sum * | sort -k1,1n | awk '{print $2, $1}' | uniq -Df 1 | sort -k2,2 | uniq
+ 9048  md5sum * | sort -k1,1n | awk '{print $2, $1}' | uniq -Df 1 | sort -k2,2 | uniq | wc -l
+ 9049  md5sum * | sort -k1,1n | awk '{print $2, $1}' | uniq -Df 1 | sort -k2,2 | uniq -f 1 | wc -l
+ 9050  md5sum * | sort -k1,1n | awk '{print $2, $1}' | uniq -Df 1 | sort -k2,2 | uniq -Df 1 | wc -l
+ 9051  md5sum * | sort -k1,1n | awk '{print $2, $1}' | uniq -Df 1 
+ 9052  md5sum * | sort -k1,1n | awk '{print $2, $1}' | uniq -Df 1 | sort -k2,2n
+ 9053  md5sum * | sort -k1,1n | awk '{print $2, $1}' | uniq -Df 1 | sort -k2,2n | awk '{print $2}'
+ 9054  md5sum * | sort -k1,1n | awk '{print $2, $1}' | uniq -Df 1 | sort -k2,2n | awk '{print $2}' | uniq
+ 9055  md5sum * | sort -k1,1n | awk '{print $2, $1}' | uniq -Df 1 | sort -k2,2n | awk '{print $2}' | uniq | wc -l
+ 9056  md5sum * | sort -k1,1n | awk '{print $2, $1}' | uniq -Df 1 | sort -k2,2n | awk '{print $2}' | 
+ 9057  md5sum * | sort -k1,1n | awk '{print $2, $1}' | uniq -Df 1 | sort -k2,2n | awk '{print $2}'
+ 9058  md5sum * | sort -k1,1n | awk '{print $2, $1}' | uniq -Df 1 | sort -k2,2n
+ 9059  montage VGltZXMgVGVuIFJvbWFuIFNtYWxsIENhcHMgJiBPbGRzdHlsZSBGaWd1cmVzLnBmYg==.png VGltZXMgVGVuIFJvbWFuLnBmYg==.png VGltZXNUZW4tUm9tYW4ub3Rm.png VGltZXNUZW4tUm9tYW5TQy5vdGY=.png VGltZXNUZW5MVFN0ZC1Sb21hbi5vdGY=.png stuff.jpg
+ 9060  display stuff.jpg
+ 9061  rm stuff.jpg
+ 9062  md5sum * | sort -k1,1n | awk '{print $2, $1}' | uniq -Df 1 | sort -k2,2n | uniq
+ 9063  md5sum * | sort -k1,1n | awk '{print $2, $1}' | uniq -Df 1 | sort -k2,2n | uniq -f 1
+ 9064  md5sum * | sort -k1,1n | awk '{print $2, $1}' | uniq -Df 1 | sort -k2,2n | uniq -f 1 | wc -l
+ 9065  md5sum * | sort -k1,1n | awk '{print $2, $1}' | uniq -Df 1 | sort -k2,2n | uniq -Df 1 | wc -l
+ 9066  md5sum * | sort -k1,1n | awk '{print $2, $1}' | uniq -Df 1 | sort -k2,2n | uniq -Df 1 
+ 9067  md5sum * | sort -k1,1n | awk '{print $2, $1}' | uniq -Df 1 | sort -k2,2n | uniq -f 1 
+ 9068  lh
+ 9069  ls *.jpg
+ 9070  lh
+ 9071  ls stuff*
+ 9072  ls -alt | wc -l
+ 9073  ls -alt *.png | wc -l
+ 9074  du
+ 9075  man ls
+ 9076  find . \( -not -iname "*.png" \) -print
+ 9077  find . \( -iname "*.png" \) -print
+ 9078  find . \( -iname "*.png" \) -print | wc -l
+ 9079  find . \( -not -iname "*.png" \) -print | wc -l
+ 9080  find . -name "*.png" -print | wc -l
+ 9081  ls -alt *.png | wc -l
+ 9082  ls -alt * | wc -l
+ 9083  history
+ 9084  md5sum *.png
+ 9085  man md5sum
+ 9086  man md5sum | sort -n
+ 9087  md5sum *.png | sort -n
+ 9088  md5sum *.png | sort -k1,1n
+ 9089  md5sum *.png | sort -k1,1n | awk '{print $1}' | uniq
+ 9090  md5sum *.png | sort -k1,1n | awk '{print $1}' | uniq | wc -l
+ 9091  md5sum *.png | wc -l
+ 9092  bc
+ 9093  ls -alt | awk '{print $9}'
+ 9094  ls -alt | awk '{print $9}' | sort | uniq
+ 9095  ls -alt | awk '{print $9}' | sort | uniq | wc -l
+ 9096  ls -alt *.png | awk '{print $9}' | sort | uniq | wc -l
+ 9097  md5sum *.png | wc -l
+ 9098  ls -alt *.png | awk '{print $9}' | sort | uniq | wc -l
+ 9099  md5sum *.png
+ 9100  md5sum *.png | sort -k1,1n
+ 9101  md5sum *.png | sort -k1,1n | awk '{print $2, $1}'
+ 9102  md5sum *.png | sort -k1,1n | awk '{print $2, $1}' | uniq -f 1 | wc -l
+ 9103  bc
+ 9104  md5sum *.png | sort -k1,1n | awk '{print $2, $1}' | uniq -Df 1 | wc -l
+ 9105  md5sum *.png | sort -k1,1n | awk '{print $2, $1}' | uniq -Df 1 
+ 9106  md5sum *.png | sort -k1,1n | awk '{print $2, $1}' | uniq -Df 1 | sort -k2,2n
+ 9107  md5sum *.png | sort -k1,1n | awk '{print $2, $1}' | uniq -Df 1 | sort -k2,2n | uniq -f 1
+ 9108  md5sum *.png | sort -k1,1n | awk '{print $2, $1}' | uniq -Df 1 | sort -k2,2n | uniq -f 1 | wc -l
+ 9109  md5sum *.png | sort -k1,1n | awk '{print $2, $1}' | uniq -Df 1 | sort -k2,2 | uniq -f 1 | wc -l
+ 9110  md5sum *.png | sort -k1,1n | awk '{print $2, $1}' | uniq -Df 1 | sort -k2,2 
+ 9111  md5sum *.png | sort -k1,1n | awk '{print $2, $1}' | uniq -Df 1 | sort -k2,2 | uniq -f 1
+ 9112  md5sum *.png | sort -k1,1n | awk '{print $2, $1}' | uniq -Df 1 | sort -k2,2 | uniq -f 1 | wc -l
+ 9113  man uniq
+ 9114  md5sum *.png | sort -k1,1n | awk '{print $2, $1}' | uniq -Df 1 > stuff
+ 9115  sort -k2,2n stuff | uniq -f 1 | wc -l
+ 9116  sort -k2,2 stuff | uniq -f 1 | wc -l
+ 9117  sort -k2,2 stuff 
+ 9118  sort -k2,2 stuff | uniq -f 1 | wc -l
+ 9119  ls
+ 9120  lh
+ 9121  rm stuff
+ 9122  lh
+ 9123  ls *.png | wc -l
+ 9124  md5sum *.png
+ 9125  md5sum *.png | sort -k1,1
+ 9126  md5sum *.png | sort -k1,1 | uniq
+ 9127  md5sum *.png | sort -k1,1 | uniq | wc -l
+ 9128  md5sum *.png | awk '{print $1}'
+ 9129  md5sum *.png | awk '{print $1}' | sort
+ 9130  md5sum *.png | awk '{print $1}' | sort | wc -l
+ 9131  md5sum *.png | awk '{print $1}' | sort | uniq | wc -l
+ 9132  bc
+ 9133  md5sum *.png | awk '{print $1}' | sort -n | uniq | wc -l
+ 9134  md5sum *.png | sort -k1,1n
+ 9135  md5sum *.png | sort -k1,1n | awk '{print $2, $1}'
+ 9136  md5sum *.png | sort -k1,1n | awk '{print $2, $1}' | uniq -f 1
+ 9137  md5sum *.png | sort -k1,1n | awk '{print $2, $1}' | uniq -f 1 | wc -l
+ 9138  md5sum *.png | sort -k1,1n | awk '{print $2, $1}' | uniq -Df 1 | wc -l
+ 9139  man uniq
+ 9140  md5sum *.png | sort -k1,1n | awk '{print $2, $1}' | uniq -uDf 1
+ 9141  md5sum *.png | sort -k1,1n | awk '{print $2, $1}' | uniq -uDf 1 | wc -l
+ 9142  md5sum *.png | sort -k1,1n | awk '{print $2, $1}' | uniq -Df 1
+ 9143  md5sum *.png | sort -k1,1n | awk '{print $2, $1}' | uniq -Df 1 | sort -k2,2n
+ 9144  md5sum *.png | sort -k1,1n | awk '{print $2, $1}' | uniq -Df 1 | sort -k2,2n | uniq -f 1
+ 9145  md5sum *.png | sort -k1,1n | awk '{print $2, $1}' | uniq -Df 1 | sort -k2,2n | uniq -f 1 | wc -l
+ 9146  md5sum *.png | sort -k1,1n | awk '{print $2, $1}' | uniq -Df 1 | sort -k2,2n | uniq -Df 1 | wc -l
+ 9147  md5sum *.png | sort -k1,1n | awk '{print $2, $1}' | uniq -Df 1 | sort -k2,2n | uniq -uf 1 | wc -l
+ 9148  md5sum *.png | sort -k1,1n | awk '{print $2, $1}' | uniq -Df 1 | sort -k2,2n | uniq -uf 1 
+ 9149  md5sum *.png | sort -k1,1n | awk '{print $2, $1}' | uniq -Df 1 | sort -k2,2n | awk '{print $1}'
+ 9150  md5sum *.png | sort -k1,1n | awk '{print $2, $1}' | uniq -Df 1 | sort -k2,2n | awk '{print $2}'
+ 9151  md5sum *.png | sort -k1,1n | awk '{print $2, $1}' | uniq -Df 1 | sort -k2,2n | awk '{print $2}' | uniq
+ 9152  md5sum *.png | sort -k1,1n | awk '{print $2, $1}' | uniq -Df 1 | sort -k2,2n | awk '{print $2}' | uniq | wc -l
+ 9153  suxcor
+ 9154  lh
+ 9155  convert RnJlaWdodEJpZ0JvbGRTQy50dGY=.png stuff.txt
+ 9156  cat stuff.txt
+ 9157  more stuff.txt
+ 9158  lh
+ 9159  rm stuff.txt
+ 9160  display RnJlaWdodEJpZ0JvbGRTQy50dGY=.png
+ 9161  cd ..
+ 9162  ls
+ 9163  ./display_random_images.sh
+ 9164  man convert
+ 9165  lh
+ 9166  cd A
+ 9167  ls
+ 9168  lh
+ 9169  convert RnJlaWdodEJpZ0JvbGRTQy50dGY=.png - 
+ 9170  convert RnJlaWdodEJpZ0JvbGRTQy50dGY=.png txt:-
+ 9171  convert RnJlaWdodEJpZ0JvbGRTQy50dGY=.png txt:- | more
+ 9172  convert RnJlaWdodEJpZ0JvbGRTQy50dGY=.png txt:- > stuff
+ 9173  vi stuff
+ 9174  convert RnJlaWdodEJpZ0JvbGRTQy50dGY=.png txt:- | awk -F"(" '{print $3}'
+ 9175  convert RnJlaWdodEJpZ0JvbGRTQy50dGY=.png txt:- | awk -F"(" '{print $3}' | sed 's/)//g'
+ 9176  convert RnJlaWdodEJpZ0JvbGRTQy50dGY=.png txt:- | awk -F"(" '{print $3}' | sed 's/)//g' | more
+ 9177  convert RnJlaWdodEJpZ0JvbGRTQy50dGY=.png txt:- | awk -F"(" '{if(NR>1){print $3}}' | sed 's/)//g' | more
+ 9178  convert RnJlaWdodEJpZ0JvbGRTQy50dGY=.png txt:- | awk -F"(" '{if(NR>1){print $3}}' | sed 's/)//g' | head
+ 9179  convert RnJlaWdodEJpZ0JvbGRTQy50dGY=.png txt:- | awk -F"(" '{if(NR>1){print $3}}' | sed 's/)//g' | wc -l
+ 9180  bc
+ 9181  convert RnJlaWdodEJpZ0JvbGRTQy50dGY=.png txt:- | wc -l
+ 9182  bc
+ 9183  convert RnJlaWdodEJpZ0JvbGRTQy50dGY=.png txt:- | more
+ 9184  identify RnJlaWdodEJpZ0JvbGRTQy50dGY=.png
+ 9185  lh
+ 9186  identify Qm9kb25pIFJlY3V0IEJsYWNrIFNTaSBCbGFjayBJdGFsaWMudHRm.png
+ 9187  cd ..
+ 9188  ls
+ 9189  cp display_random_images.sh ..
+ 9190  cd ..
+ 9191  ls
+ 9192  rm -rf notMNIST_large
+ 9193  tar ztvf notMNIST_large.tar.gz
+ 9194  tar zxvf notMNIST_large.tar.gz
+ 9195  lh
+ 9196  ls
+ 9197  cd notMNIST_large
+ 9198  ls
+ 9199  cd A
+ 9200  ls
+ 9201  lh
+ 9202  identify Qm9kb25pIFJlY3V0IEJsYWNrIFNTaSBCbGFjayBJdGFsaWMudHRm.png
+ 9203  convert RnJlaWdodEJpZ0JvbGRTQy50dGY=.png txt:- | wc -l
+ 9204  history
+ 9205  convert RnJlaWdodEJpZ0JvbGRTQy50dGY=.png txt:- | awk -F"(" '{if(NR>1){print $3}}' | sed 's/)//g' | wc -l
+ 9206  man a2b
+ 9207  a2b
+ 9208  convert RnJlaWdodEJpZ0JvbGRTQy50dGY=.png txt:- | awk -F"(" '{if(NR>1){print $3}}' | sed 's/)//g' | a2b n1=1 > bub
+ 9209  suaddhead
+ 9210  convert RnJlaWdodEJpZ0JvbGRTQy50dGY=.png txt:- | awk -F"(" '{if(NR>1){print $3}}' | sed 's/)//g' | a2b n1=1 | suaddhead ns=784 | sushw key=dt a=1000 > trace.su
+ 9211  rm bub
+ 9212  convert RnJlaWdodEJpZ0JvbGRTQy50dGY=.png txt:- | awk -F"(" '{if(NR>1){print $3}}' | sed 's/)//g' | a2b n1=1 | suaddhead ns=784 | sushw key=dt a=1000 > filter.su
+ 9213  suxcor
+ 9214  suxcor < trace.su sufile=filter.su | suxwigb
+ 9215  sugain
+ 9216  suscale
+ 9217  sugain
+ 9218  suop
+ 9219  suname | grep bias
+ 9220  suname | grep BIAS
+ 9221  suop2
+ 9222  suxcor
+ 9223  suop
+ 9224  history
+ 9225  convert RnJlaWdodEJpZ0JvbGRTQy50dGY=.png txt:- | awk -F"(" '{if(NR>1){print $3}}' | sed 's/)//g' | a2b n1=1 | suaddhead ns=784 | sushw key=dt a=1000 | suop op=avg > trace.su
+ 9226  convert RnJlaWdodEJpZ0JvbGRTQy50dGY=.png txt:- | awk -F"(" '{if(NR>1){print $3}}' | sed 's/)//g' | a2b n1=1 | suaddhead ns=784 | sushw key=dt a=1000 | suop op=avg > filter.su
+ 9227  suxcor < trace.su sufile=filter.su | suxwigb
+ 9228  convert RnJlaWdodEJpZ0JvbGRTQy50dGY=.png txt:- | awk -F"(" '{if(NR>1){print $3}}' | sed 's/)//g' | a2b n1=1 | suaddhead ns=28 | sushw key=dt a=1000 | suop op=avg > trace.su
+ 9229  suximage < trace.su perc=100
+ 9230  convert RnJlaWdodEJpZ0JvbGRTQy50dGY=.png txt:- | awk -F"(" '{if(NR>1){print $3}}' | sed 's/)//g' | a2b n1=1 | suaddhead ns=28 | sushw key=dt a=1000 | suop op=avg > filter.su
+ 9231  suxcor
+ 9232  suxcor < trace.su sufile=filter.su panel=1 | suxwigb
+ 9233  convert RnJlaWdodEJpZ0JvbGRTQy50dGY=.png txt:- | awk -F"(" '{if(NR>1){print $3}}' | sed 's/)//g' | a2b n1=1 | suaddhead ns=28 | sushw key=dt a=1000 > filter.su
+ 9234  convert RnJlaWdodEJpZ0JvbGRTQy50dGY=.png txt:- | awk -F"(" '{if(NR>1){print $3}}' | sed 's/)//g' | a2b n1=1 | suaddhead ns=28 | sushw key=dt a=1000 > trace.su
+ 9235  suxcor < trace.su sufile=filter.su panel=1 | suxwigb
+ 9236  suxcor < trace.su sufile=filter.su | suxwigb
+ 9237  suximage < filter.su
+ 9238  suximage < trace.su
+ 9239  suxcor
+ 9240  suxcor < trace.su sufile=filter.su panel=1 ntrc=28 | suxwigb
+ 9241  lh
+ 9242  history 
+ 9243  convert SGVsdmV0aWNhQlEtTWVkaXVtLm90Zg==.png txt:- | awk -F"(" '{if(NR>1){print $3}}' | sed 's/)//g' | a2b n1=1 | suaddhead ns=28 | sushw key=dt a=1000 > filter.su
+ 9244  suxcor < trace.su sufile=filter.su panel=1 ntrc=28 | suxwigb
+ 9245  convert SGVsdmV0aWNhQlEtTWVkaXVtLm90Zg==.png txt:- | awk -F"(" '{if(NR>1){print $3}}' | sed 's/)//g' | a2b n1=1 | suaddhead ns=28 | sushw key=dt a=1000 | suop op=avg > filter.su
+ 9246  convert RnJlaWdodEJpZ0JvbGRTQy50dGY=.png txt:- | awk -F"(" '{if(NR>1){print $3}}' | sed 's/)//g' | a2b n1=1 | suaddhead ns=28 | sushw key=dt a=1000 | suop op=avg > trace.su
+ 9247  lh
+ 9248  suxcor < trace.su sufile=filter.su panel=1 ntrc=28 | suxwigb
+ 9249  history
+ 9250  display SGVsdmV0aWNhQlEtTWVkaXVtLm90Zg==.png &
+ 9251  display RnJlaWdodEJpZ0JvbGRTQy50dGY=.png
+ 9252  lh
+ 9253  cd ..
+ 9254  ls
+ 9255  cd ..
+ 9256  history.sh
+ 9257  cd notMNIST_large
+ 9258  lh
+ 9259  cd A
+ 9260  ls
+ 9261  rm *.su
+ 9262  lh
+ 9263  cd
+ 9264  ssh stockminer@www.stockminer.net
+ 9265  cd Udacity
+ 9266  ls
+ 9267  cd Deep_Learning
+ 9268  history | grep git
+ 9269  git remote add origin https://github.com/JOravetz/Deep_Learning.git
+ 9270  history | grep git
+ 9271  history | grep git | grep remote
+ 9272  git remote add upstream https://github.com/JOravetz/Deep_Learning.git
+ 9273  git remote add origin https://github.com/JOravetz/Deep_Learning.git
+ 9274  git init
+ 9275  git remote add origin https://github.com/JOravetz/Deep_Learning.git
+ 9276  ls
+ 9277  cd
+ 9278  cd dl
+ 9279  ls
+ 9280  cp display_random_images.sh ~/Udacity/Deep_Learning/
+ 9281  cp 1_notmnist.ipynb 2_fullyconnected.ipynb ~/Udacity/Deep_Learning/
+ 9282  cat history.lis
+ 9283  history | tail -1000 > ~/Udacity/Deep_Learning/reference.lis
