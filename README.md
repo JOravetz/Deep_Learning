@@ -7,7 +7,10 @@ Find and remove all files with zero bytes - linux ***find*** command in bash she
 
 ```python
 %%bash
-cd /home/jjoravet/Udacity/Deep_Learning/tensorflow/tensorflow/examples/udacity
+
+### insert your path here to tensorflow udacity examples directory ###
+cd tensorflow/tensorflow/examples/udacity
+
 find . -name "*.png" -size 0 -print -exec rm -f {} \;
 ```
 
